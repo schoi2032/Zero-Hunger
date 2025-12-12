@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Waste Facts</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Zero<span style="color: var(--color-secondary);">Hunger</span></div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="zero-hunger.html">Zero Hunger</a></li>
+                <li><a href="food-waste.html" class="active">Food Waste</a></li>
+                <li><a href="faq.html">Q&A</a></li>
+                <li><a href="gallery.html">Data Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="height: 50vh; background: #c05621;">
+        <div class="hero-content">
+            <h1>Food Waste Facts</h1>
+            <p>1/3 of all food prepared for human consumption is lost or wasted.</p>
+        </div>
+    </section>
+
+    <section class="container">
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem;">
+            <!-- Text Content -->
+            <div>
+                <h2>Where is Food Wasted?</h2>
+                <p>Food loss and waste happen at every stage of the food supply chain. However, in developed countries,
+                    a significant portion occurs at the consumption stage (households and proper services).</p>
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #fffaf0; border-left: 4px solid #c05621;">
+                    <strong>Did you know?</strong>
+                    <p>If food waste were a country, it would be the third-largest emitter of greenhouse gases after
+                        China and the USA.</p>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-lg);">
+                <canvas id="wastePieChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Food Recovery Hierarchy -->
+        <section class="reveal" style="margin-top: 5rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">The Food Recovery Hierarchy</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">The EPA's inverted pyramid
+                showing the most preferred to least preferred methods of handling surplus food.</p>
+
+            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.5rem;">
+                <div
+                    style="background: #276749; color: white; padding: 1rem; text-align: center; width: 100%; border-radius: 8px 8px 0 0;">
+                    Source Reduction (Reduce the volume of surplus food generated)</div>
+                <div
+                    style="background: #2f855a; color: white; padding: 1rem; text-align: center; width: 90%; margin: 0 auto;">
+                    Feed Hungry People (Donate extra food to food banks)</div>
+                <div
+                    style="background: #38a169; color: white; padding: 1rem; text-align: center; width: 80%; margin: 0 auto;">
+                    Feed Animals (Divert food scraps to animal feed)</div>
+                <div
+                    style="background: #48bb78; color: white; padding: 1rem; text-align: center; width: 70%; margin: 0 auto;">
+                    Industrial Uses (Provide waste oils for fuel/energy)</div>
+                <div
+                    style="background: #68d391; color: white; padding: 1rem; text-align: center; width: 60%; margin: 0 auto;">
+                    Composting (Create nutrient-rich soil)</div>
+                <div
+                    style="background: #9ae6b4; color: #276749; padding: 1rem; text-align: center; width: 50%; margin: 0 auto; border-radius: 0 0 8px 8px;">
+                    Landfill (The last resort)</div>
+            </div>
+        </section>
+
+        <!-- Practical Guide: Composting -->
+        <section class="reveal" style="background: #f0fff4; padding: 3rem; border-radius: 20px; margin-top: 5rem;">
+            <h2 style="text-align: center; color: var(--color-primary); margin-bottom: 2rem;">Composting 101: Turn Waste
+                into Wealth</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: center;">
+                <div>
+                    <div
+                        style="background: white; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #48bb78;">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>1. Greens (Nitrogen)</h4>
+                    <p style="font-size: 0.9rem;">Vegetable scraps, fruit peels, coffee grounds, and fresh grass
+                        clippings. These provide moisture and nutrients.</p>
+                </div>
+                <div>
+                    <div
+                        style="background: white; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #a0522d;">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h4>2. Browns (Carbon)</h4>
+                    <p style="font-size: 0.9rem;">Dry leaves, twigs, paper, cardboard, and sawdust. These provide
+                        structure and aeration.</p>
+                </div>
+                <div>
+                    <div
+                        style="background: white; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #3182ce;">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h4>3. Water & Air</h4>
+                    <p style="font-size: 0.9rem;">Turn your pile regularly to add oxygen and keep it moist like a
+                        wrung-out sponge.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips List -->
+        <section class="reveal" style="margin-top: 5rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">5 Ways to Reduce Waste at Home</h2>
+            <ul
+                style="background: white; padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-md); max-width: 800px; margin: 0 auto;">
+                <li
+                    style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; display: flex; gap: 1rem;">
+                    <i class="fas fa-check-circle" style="color: var(--color-secondary); margin-top: 4px;"></i>
+                    <div>
+                        <strong>Shop Smart:</strong> Make a list and stick to it. Avoid buying bulk perishables unless
+                        you have a plan.
+                    </div>
+                </li>
+                <li
+                    style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; display: flex; gap: 1rem;">
+                    <i class="fas fa-check-circle" style="color: var(--color-secondary); margin-top: 4px;"></i>
+                    <div>
+                        <strong>Store Correctly:</strong> Keep potatoes and onions apart. Store herbs in water. Use the
+                        crisper drawer effectively.
+                    </div>
+                </li>
+                <li
+                    style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; display: flex; gap: 1rem;">
+                    <i class="fas fa-check-circle" style="color: var(--color-secondary); margin-top: 4px;"></i>
+                    <div>
+                        <strong>Understand Dates:</strong> "Best before" refers to quality, not safety. Trust your
+                        senses (smell/look) before tossing.
+                    </div>
+                </li>
+                <li
+                    style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; display: flex; gap: 1rem;">
+                    <i class="fas fa-check-circle" style="color: var(--color-secondary); margin-top: 4px;"></i>
+                    <div>
+                        <strong>Love Leftovers:</strong> dedicate one night a week as "Leftover Night" or repurpose them
+                        into soups and stir-frys.
+                    </div>
+                </li>
+                <li style="display: flex; gap: 1rem;">
+                    <i class="fas fa-check-circle" style="color: var(--color-secondary); margin-top: 4px;"></i>
+                    <div>
+                        <strong>First In, First Out (FIFO):</strong> Move older products to the front of your
+                        fridge/cupboard when you unpack groceries.
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <div style="margin-top: 5rem;">
+            <h2 style="text-align: center;">Food Waste by Commodity</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--color-text-muted);">Percentage of production
+                lost or wasted</p>
+
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-lg);">
+                <canvas id="commodityChart"></canvas>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2025 Zero Hunger Initiative.
+        </div>
+    </footer>
+
+    <script>
+        // Waste by Sector Pie Chart
+        const ctx1 = document.getElementById('wastePieChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'doughnut',
+            data: {
+                labels: ['Households', 'Food Service', 'Retail'],
+                datasets: [{
+                    label: 'Global Food Waste %',
+                    data: [61, 26, 13],
+                    backgroundColor: [
+                        '#c05621',
+                        '#ed8936',
+                        '#fbd38d'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: { display: true, text: 'Distribution of Food Waste' }
+                }
+            }
+        });
+
+        // Commodity Bar Chart
+        const ctx2 = document.getElementById('commodityChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Roots & Tubers', 'Fruits & Vegetables', 'Fish & Seafood', 'Cereals', 'Meat', 'Dairy'],
+                datasets: [{
+                    label: 'Percentage Wasted',
+                    data: [45, 45, 30, 30, 20, 20],
+                    backgroundColor: '#046c4e',
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

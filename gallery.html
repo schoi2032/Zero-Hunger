@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Zero<span style="color: var(--color-secondary);">Hunger</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="zero-hunger.html">Zero Hunger</a></li>
+                <li><a href="food-waste.html">Food Waste</a></li>
+                <li><a href="faq.html">Q&A</a></li>
+                <li><a href="gallery.html" class="active">Data Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container" style="padding-top: 150px;">
+        <h1 style="text-align: center; margin-bottom: 1rem;">Global Data Visualization</h1>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 4rem auto; color: var(--color-text-muted);">
+            Explore the metrics that define our challenge. These visualizations represent the latest data on food
+            insecurity, waste management, and sustainability efforts.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 2rem;">
+
+            <!-- Radar Chart: Sustainability Goals -->
+            <div class="card" style="padding: 2rem;">
+                <h3 style="text-align: center; margin-bottom: 1rem;">SDG Progress Indicators</h3>
+                <canvas id="radarChart"></canvas>
+            </div>
+
+            <!-- Polar Area: Causes of Waste -->
+            <div class="card" style="padding: 2rem;">
+                <h3 style="text-align: center; margin-bottom: 1rem;">Primary Drivers of Food Loss</h3>
+                <canvas id="polarChart"></canvas>
+            </div>
+
+            <!-- Bubble Chart: GDP vs Hunger -->
+            <div class="card" style="padding: 2rem; grid-column: 1 / -1;">
+                <h3 style="text-align: center; margin-bottom: 1rem;">GDP vs. Malnutrition Prevalence (Selected Regions)
+                </h3>
+                <p style="text-align: center; font-size: 0.9rem; color: #718096; margin-bottom: 1rem;">Circle size
+                    represents population volume</p>
+                <canvas id="bubbleChart" style="max-height: 400px;"></canvas>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2025 Zero Hunger Initiative
+        </div>
+    </footer>
+
+    <script>
+        // Radar Chart
+        new Chart(document.getElementById('radarChart'), {
+            type: 'radar',
+            data: {
+                labels: ['Nutrition', 'Agriculture', 'Waste Reduction', 'Trade', 'Education', 'Policy'],
+                datasets: [{
+                    label: 'Current Status (0-100)',
+                    data: [65, 59, 40, 70, 56, 55],
+                    fill: true,
+                    backgroundColor: 'rgba(4, 108, 78, 0.2)',
+                    borderColor: '#046c4e',
+                    pointBackgroundColor: '#046c4e',
+                    pointBorderColor: '#fff'
+                }]
+            },
+            options: { elements: { line: { tension: 0.3 } } }
+        });
+
+        // Polar Area Chart
+        new Chart(document.getElementById('polarChart'), {
+            type: 'polarArea',
+            data: {
+                labels: ['Storage Issues', 'Processing', 'Retail Standards', 'Home Waste', 'Transport'],
+                datasets: [{
+                    label: 'Impact Factor',
+                    data: [15, 10, 20, 40, 15],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)'
+                    ]
+                }]
+            }
+        });
+
+        // Bubble Chart
+        new Chart(document.getElementById('bubbleChart'), {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: 'Regions',
+                    data: [
+                        { x: 2000, y: 30, r: 15 }, // Region A
+                        { x: 12000, y: 10, r: 10 }, // Region B
+                        { x: 35000, y: 5, r: 8 },  // Region C
+                        { x: 5000, y: 25, r: 20 }, // Region D
+                        { x: 45000, y: 2, r: 5 }   // Region E
+                    ],
+                    backgroundColor: '#c05621'
+                }]
+            },
+            options: {
+                scales: {
+                    x: { title: { display: true, text: 'GDP per Capita ($)' } },
+                    y: { title: { display: true, text: 'Malnutrition Rate (%)' } }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

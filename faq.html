@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Hunger Q&A</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .faq-question:hover {
+            background-color: var(--color-bg-off-white);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--color-text-muted);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            padding-top: 0;
+            max-height: 500px;
+        }
+
+        .icon-plus {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .icon-plus {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Zero<span style="color: var(--color-secondary);">Hunger</span></div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="zero-hunger.html">Zero Hunger</a></li>
+                <li><a href="food-waste.html">Food Waste</a></li>
+                <li><a href="faq.html" class="active">Q&A</a></li>
+                <li><a href="gallery.html">Data Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container" style="padding-top: 150px;">
+        <h1 style="text-align: center; margin-bottom: 3rem;">Frequently Asked Questions</h1>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What is "Zero Hunger"? <i class="fas fa-plus icon-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    Zero Hunger is Goal 2 of the 17 Sustainable Development Goals (SDGs) established by the United
+                    Nations in 2015. It aims to end hunger, achieve food security and improved nutrition, and promote
+                    What are the main causes of Hunger and Food Waste? <i class="fas fa-plus icon-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <strong>Hunger</strong> is primarily caused by:
+                    <ul style="list-style:disc; margin-left:1.5rem; margin-top:0.5rem;">
+                        <li><strong>Poverty:</strong> Lack of resources to buy or grow food.</li>
+                        <li><strong>Conflict:</strong> War displaces farmers and destroys infrastructure.</li>
+                        <li><strong>Climate Change:</strong> Droughts and floods ruin harvests.</li>
+                    </ul>
+                    <br>
+                    <strong>Food Waste</strong> is caused by:
+                    <ul style="list-style:disc; margin-left:1.5rem; margin-top:0.5rem;">
+                        <li><strong>Consumer Habits:</strong> Over-buying and confusion over dates.</li>
+                        <li><strong>Supply Chain Issues:</strong> Poor storage and transport in developing regions.</li>
+                        <li><strong>Retail Standards:</strong> Rejecting "ugly" but edible produce.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What are the effects of these issues? <i class="fas fa-plus icon-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    The effects are devastating and widespread:
+                    <ul style="list-style:disc; margin-left:1.5rem; margin-top:0.5rem;">
+                        <li><strong>Health:</strong> Malnutrition stunts growth and weakens immune systems (Hunger).
+                        </li>
+                        <li><strong>Environment:</strong> Wasting food wastes the water and energy used to grow it, and
+                            rotting food in landfills creates methane, a potent greenhouse gas (Food Waste).</li>
+                        <li><strong>Economy:</strong> Billions of dollars are lost annually due to wasted resources and
+                            healthcare costs.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Who can help, and what can they do? <i class="fas fa-plus icon-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    Everyone has a role to play!
+                    <ul style="list-style:disc; margin-left:1.5rem; margin-top:0.5rem;">
+                        <li><strong>World Leaders:</strong> Can implement policies to support small farmers and improve
+                            infrastructure.</li>
+                        <li><strong>Organizations:</strong> The World Food Programme (WFP), FAO, and local food banks
+                            provide direct aid and education.</li>
+                        <li><strong>You (Individuals):</strong> Can reduce personal waste, support local farmers, donate
+                            to food banks, and advocate for sustainable policies.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is there enough food to feed everyone? <i class="fas fa-plus icon-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes, the world produces enough food to feed everyone on the planet. However, one-third of it is lost
+                    or wasted, and unequal distribution systems mean that hundreds of millions still suffer from hunger.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What is the difference between "Food Loss" and "Food Waste"? <i class="fas fa-plus icon-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <strong>Food Loss</strong> occurs earlier in the supply chain (harvest, storage, transport), often
+                    due to lack of technology in developing countries. <br>
+                    <strong>Food Waste</strong> occurs at the retail and consumer level (shops, restaurants, homes),
+                    mostly in developed countries, due to behavior and aesthetic standards.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Does eating local help zero hunger? <i class="fas fa-plus icon-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes! Supporting local farmers diversifies the food supply, boosts the local economy, and reduces the
+                    carbon footprint associated with transporting food long distances. It helps create a more resilient
+                    food system for your community.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What should I do if food passes its "Best Before" date? <i class="fas fa-plus icon-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    Data shows that 20% of consumer food waste is linked to date labeling confusion. "Best Before"
+                    usually relates to quality, not safety. If the packaging is intact and it smells/looks fine, it is
+                    often still safe to eat. However, always respect "Use By" or "Expiration" dates on perishables like
+                    meat and dairy.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2025 Zero Hunger Initiative.
+        </div>
+    </footer>
+
+    <script>
+        // Simple Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                // Close others
+                faqItems.forEach(i => {
+                    if (i !== item) i.classList.remove('active');
+                });
+                // Toggle current
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
